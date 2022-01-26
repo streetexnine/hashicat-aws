@@ -119,6 +119,8 @@ resource "aws_eip_association" "hashicat" {
 }
 
 resource "aws_instance" "hashicat" {
+  department                   = devops
+  billable                    = true
   ami                         = data.aws_ami.ubuntu.id
   instance_type               = var.instance_type
   key_name                    = aws_key_pair.hashicat.key_name
