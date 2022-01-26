@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Outputs file
 output "catapp_url" {
   value = "http://${aws_eip.hashicat.public_dns}"
@@ -6,7 +5,8 @@ output "catapp_url" {
 
 output "catapp_ip" {
   value = "http://${aws_eip.hashicat.public_ip}"
-=======
+}
+
 output "s3_bucket_id" {
   description = "The name of the bucket."
   value       = element(concat(aws_s3_bucket_policy.this.*.id, aws_s3_bucket.this.*.id, [""]), 0)
@@ -45,5 +45,4 @@ output "s3_bucket_website_endpoint" {
 output "s3_bucket_website_domain" {
   description = "The domain of the website endpoint, if the bucket is configured with a website. If not, this will be an empty string. This is used to create Route 53 alias records. "
   value       = element(concat(aws_s3_bucket.this.*.website_domain, [""]), 0)
->>>>>>> e732c9cd947d6f01c28b97262d4309585827be05
 }

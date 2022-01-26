@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ##############################################################################
 # Variables File
 #
@@ -48,7 +47,7 @@ variable "width" {
 variable "placeholder" {
   default     = "placekitten.com"
   description = "Image-as-a-service URL. Some other fun ones to try are fillmurray.com, placecage.com, placebeard.it, loremflickr.com, baconmockup.com, placeimg.com, placebear.com, placeskull.com, stevensegallery.com, placedog.net"
-=======
+}
 variable "create_bucket" {
   description = "Controls if S3 bucket should be created"
   type        = bool
@@ -227,5 +226,4 @@ variable "object_ownership" {
   description = "Object ownership. Valid values: BucketOwnerEnforced, BucketOwnerPreferred or ObjectWriter. 'BucketOwnerEnforced': ACLs are disabled, and the bucket owner automatically owns and has full control over every object in the bucket. 'BucketOwnerPreferred': Objects uploaded to the bucket change ownership to the bucket owner if the objects are uploaded with the bucket-owner-full-control canned ACL. 'ObjectWriter': The uploading account will own the object if the object is uploaded with the bucket-owner-full-control canned ACL."
   type        = string
   default     = "ObjectWriter"
->>>>>>> e732c9cd947d6f01c28b97262d4309585827be05
 }
