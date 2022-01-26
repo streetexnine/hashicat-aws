@@ -119,6 +119,7 @@ resource "aws_eip_association" "hashicat" {
 }
 
 resource "aws_instance" "hashicat" {
+  department                  = "devops"
   ami                         = data.aws_ami.ubuntu.id
   instance_type               = var.instance_type
   key_name                    = aws_key_pair.hashicat.key_name
@@ -130,6 +131,8 @@ resource "aws_instance" "hashicat" {
     Name = "${var.prefix}-hashicat-instance"
   }
 }
+
+
 
 # We're using a little trick here so we can run the provisioner without
 # destroying the VM. Do not do this in production.
